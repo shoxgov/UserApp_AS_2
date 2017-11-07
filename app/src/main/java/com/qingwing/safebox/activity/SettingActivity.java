@@ -110,31 +110,31 @@ public class SettingActivity extends Activity
                     }
                     if (UserInfo.lock_style.equals("a")) {//lock_style: 手势类型  a:手势   b:指纹  c:数字
 //                        ToastTool.showShortBigToast(SettingActivity.this, "需要先验证数字开箱密码");
-//                        AlertDialog.Builder build = new AlertDialog.Builder(SettingActivity.this);
-//                        View verticalView = LayoutInflater.from(SettingActivity.this).inflate(R.layout.zidingyi_alert2, null);
-//                        final EditText verticalOldPwdEdit = (EditText) verticalView.findViewById(R.id.old_password);
-//                        build.setView(verticalView);
-//                        build.setPositiveButton("确定", new AlertDialog.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                String oldPasswordString = verticalOldPwdEdit.getText().toString().trim();
-//                                LogUtil.d("填的密码:" + oldPasswordString + " 存的密码:" + UserInfo.UserOpenBoxPassowrd);
-//                                if (!TextUtils.isEmpty(oldPasswordString) && oldPasswordString.equals(UserInfo.UserOpenBoxPassowrd)) {
+                        AlertDialog.Builder build = new AlertDialog.Builder(SettingActivity.this);
+                        View verticalView = LayoutInflater.from(SettingActivity.this).inflate(R.layout.zidingyi_alert2, null);
+                        final EditText verticalOldPwdEdit = (EditText) verticalView.findViewById(R.id.old_password);
+                        build.setView(verticalView);
+                        build.setPositiveButton("确定", new AlertDialog.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                String oldPasswordString = verticalOldPwdEdit.getText().toString().trim();
+                                LogUtil.d("填的密码:" + oldPasswordString + " 存的密码:" + UserInfo.UserOpenBoxPassowrd);
+                                if (!TextUtils.isEmpty(oldPasswordString) && oldPasswordString.equals(UserInfo.UserOpenBoxPassowrd)) {
                                     Intent intent = new Intent(SettingActivity.this, GuestureLockPwdSettingActivity.class);
                                     startActivity(intent);
-//                                } else {
-//                                    ToastTool.showShortBigToast(SettingActivity.this, "密码错误");
-//                                    verticalOldPwdEdit.setText("");
-//                                }
-//                            }
-//                        });
-//                        build.setNegativeButton("取消", new AlertDialog.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                dialog.dismiss();
-//                            }
-//                        });
-//                        build.show();
+                                } else {
+                                    ToastTool.showShortBigToast(SettingActivity.this, "密码错误");
+                                    verticalOldPwdEdit.setText("");
+                                }
+                            }
+                        });
+                        build.setNegativeButton("取消", new AlertDialog.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                        build.show();
                     } else {
                         Intent number = new Intent(SettingActivity.this, ModifyOpenBoxPwdByNumberActivity.class);
                         startActivity(number);

@@ -320,6 +320,7 @@ public class BluetoothService extends Service {
             mBluetoothGatt.disconnect();
             mBluetoothGatt.close();
             mBluetoothGatt = null;
+            isConnected = false;
         }
     }
 

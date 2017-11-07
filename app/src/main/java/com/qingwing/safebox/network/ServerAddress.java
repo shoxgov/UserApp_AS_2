@@ -1,8 +1,8 @@
 package com.qingwing.safebox.network;
 
 public class ServerAddress {
-//    public static final String SERVER_URL = "http://www.keenzy.cn/depositbox/";
-    	public  static final String SERVER_URL = "http://120.25.224.159/depositbox/";
+    public static final String SERVER_URL = "http://www.keenzy.cn/depositbox/";
+//    	public  static final String SERVER_URL = "http://120.25.224.159/depositbox/";
     public static final String Register_URL = SERVER_URL + "user-register.action";
     public static final String USER_LOGIN_URL = SERVER_URL + "user-login.action";
     public static final String USER_REGISTER_URL = SERVER_URL + "user-register.action";

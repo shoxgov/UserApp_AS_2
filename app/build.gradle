@@ -6,7 +6,7 @@ def releaseTime() {
 
 android {
     compileSdkVersion 22
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '26.0.2'
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
     defaultConfig {
@@ -14,12 +14,17 @@ android {
         applicationId "com.qingwing.safebox"
         minSdkVersion 18
         targetSdkVersion 22
-        versionCode 7
-        versionName "1.1.7"
+        versionCode 8
+        versionName "2.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk {
             // 设置支持的SO库架构
             abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
         }
     }
 //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
@@ -61,17 +66,17 @@ android {
             // 签名配置
             signingConfig signingConfigs.release
             //打包输出格式
-            applicationVariants.all { variant ->
-                variant.outputs.each { output ->
-                    def outputFile = output.outputFile
-                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+            //applicationVariants.all { variant ->
+             //   variant.outputs.each { output ->
+             //       def outputFile = output.outputFile
+             //       if (outputFile != null && outputFile.name.endsWith('.apk')) {
                         // 输出apk名称为app_v1.0_2015-xx-xx_xxxx.apk
-                        def fileName = "UserApp_v${defaultConfig.versionName}_${releaseTime()}.apk"
+             //           outputFile = "UserApp_v${defaultConfig.versionName}_${releaseTime()}.apk"
                         //def fileName = "app_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
-                        output.outputFile = new File(outputFile.parent, fileName)
-                    }
-                }
-            }
+             //           output.outputFile = new File(outputFile.parent, fileName)
+             //       }
+             //   }
+            //}
         }
     }
 }

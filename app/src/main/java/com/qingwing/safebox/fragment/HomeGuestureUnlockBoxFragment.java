@@ -201,7 +201,6 @@ public class HomeGuestureUnlockBoxFragment extends Fragment implements Observer,
         } else {
             tishiyu.setText("请绘制开箱手势");
             tishiyu.setTextColor(Color.BLACK);
-
         }
         if (QWApplication.openboxErrorCount >= 5) {
             time = new TimeCount(QWApplication.openboxErrorMillis, 1000);
@@ -268,6 +267,11 @@ public class HomeGuestureUnlockBoxFragment extends Fragment implements Observer,
         Animation shake = AnimationUtils.loadAnimation(getActivity(), R.anim.shake);
         tishiyu.startAnimation(shake);
 
+    }
+
+    public void connectSucces(){
+        tishiyu.setText("设备已连接");
+        tishiyu.setTextColor(Color.BLACK);
     }
 
     @Override

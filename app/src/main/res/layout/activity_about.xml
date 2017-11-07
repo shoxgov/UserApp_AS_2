@@ -73,7 +73,7 @@
                     android:layout_height="60dp"
                     android:layout_centerVertical="true"
                     android:layout_gravity="center"
-                    android:src="@mipmap/img_5" />
+                    android:src="@mipmap/ic_launcher" />
             </RelativeLayout>
 
             <TextView

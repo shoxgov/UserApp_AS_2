@@ -474,7 +474,7 @@ public class UnbindMipcaCaptureActivity extends BaseMipcaCaptureActivity impleme
                 String data = ob.getObject().toString();
                 if (data.substring(16, 18).equals("11")) {//11:玩锁开箱; 10:	蓝牙指令开箱;01:按键开箱
                     if (isKeyboardOpenBox) {
-                        mHandler.sendEmptyMessage(FAIL);
+//                        mHandler.sendEmptyMessage(FAIL);
                         return;
                     }
                     LoadingDialog.dismissDialog();

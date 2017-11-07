@@ -515,6 +515,9 @@ public class MainBoxActivity extends FragmentActivity implements OnClickListener
                 qr.setText("扫码租箱");
                 Drawable top = getResources().getDrawable(R.drawable.bottom_scan);
                 qr.setCompoundDrawablesWithIntrinsicBounds(null, top, null, null);
+                btElectricIcon.setImageDrawable(getResources().getDrawable(R.mipmap.battery_0));
+                btElectricValue.setText("0%");
+                btStatus.setImageResource(R.mipmap.bluetooth_disconnect);
                 if (bluetoothService != null) {
                     bluetoothService.closeBT();
                     bluetoothService.startBLEscan();
@@ -899,6 +902,13 @@ public class MainBoxActivity extends FragmentActivity implements OnClickListener
                         ToastTool.showShortBigToast(this, "当前蓝牙未连接");
                     }
                 }
+                if (UserInfo.lock_style.equals("a")) {
+                    lockStyle = "a";
+                    ((HomeGuestureUnlockBoxFragment) mFragments[1]).onResume();
+                } else {
+                    lockStyle = "c";
+                    ((HomeNumberUnlockBoxFragment) mFragments[0]).onResume();
+                }
                 break;
             case BleObserverConstance.BOX_RECEIVER_READINFO:
                 try {
@@ -1115,6 +1125,7 @@ public class MainBoxActivity extends FragmentActivity implements OnClickListener
                         case BluetoothAdapter.STATE_TURNING_OFF://手机蓝牙正在关闭
                             if (bluetoothService != null) {
                                 bluetoothService.closeBT();
+                                btStatus.setImageResource(R.mipmap.bluetooth_disconnect);
                             }
                             break;
                         case BluetoothAdapter.STATE_OFF://手机蓝牙关闭

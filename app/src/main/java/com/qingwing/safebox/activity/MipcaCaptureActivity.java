@@ -65,7 +65,7 @@ import java.util.Vector;
 public class MipcaCaptureActivity extends BaseMipcaCaptureActivity implements Callback, NetCallBack, Observer {
 
     private static final int FAIL = 1;
-    private static final int DELAYTIME = 180000;
+    private static final int DELAYTIME = 120000;
     private CaptureActivityHandler handler;
     private ViewfinderView viewfinderView;
     private boolean hasSurface;
@@ -206,6 +206,7 @@ public class MipcaCaptureActivity extends BaseMipcaCaptureActivity implements Ca
 //            finish();
         } else if (requestCode == 1) {//绑定时要先缴费
             if (resultCode == PackageMoneyActivity.WEIXIN_ALIPAY_PAY_SUCCESS || resultCode == PackageMoneyActivity.CARDNUMBER_PAY_SUCCESS) {
+                UserInfo.isOverDate = false;
                 requestBindStatus(UserInfo.QrBtId);
             }
         }
