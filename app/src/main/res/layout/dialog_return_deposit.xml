@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="10dip"
+    android:paddingTop="10dip">
+
+
+    <TextView
+        android:id="@+id/showInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="退还押金"
+        android:textSize="@dimen/textSize_18" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="10dip"
+        android:gravity="center"
+        android:text="请填入真实的姓名和卡号，押金会在3-7个工作日内申核后退还，且剩余天数会清零，确认要进行此退款吗？"
+        android:textSize="@dimen/textSize_16" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/return_deposit_truename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="您的姓名" />
+
+        <EditText
+            android:id="@+id/return_deposit_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:hint="您的卡号" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/refuseBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_queding"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_16" />
+
+        <Button
+            android:id="@+id/agreeBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dip"
+            android:layout_weight="1"
+            android:background="@drawable/button_queding"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="确认"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_16" />
+    </LinearLayout>
+
+</LinearLayout>

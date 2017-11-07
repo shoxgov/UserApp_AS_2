@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@mipmap/title_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/calback"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/fanhui_baise" />
+
+        <ImageView
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:background="#45a212" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TitleTheme"
+            android:layout_marginLeft="15dip"
+            android:text="修改开箱密码" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="20dip"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boarder_bg_semicircle"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:text="当前密码："
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/old_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="请输入当前密码"
+                android:inputType="number"
+                android:password="true"
+                android:singleLine="true"
+                android:textColorHint="@color/textcolor_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/boarder_bg_semicircle"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:text="新密码："
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/new_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="密码为6位数字组成"
+                android:inputType="number"
+                android:password="true"
+                android:singleLine="true"
+                android:textColorHint="@color/textcolor_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/boarder_bg_semicircle"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:text="确认密码："
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/queren_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="密码为6位数字组成"
+                android:inputType="number"
+                android:password="true"
+                android:singleLine="true"
+                android:textColorHint="@color/textcolor_gray" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="15dip"
+        android:background="@drawable/button_queding"
+        android:text="确  定"
+        android:textColor="@color/white" />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/forget_openpwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="15dip"
+        android:background="@drawable/button_queding"
+        android:text="忘记开箱密码?"
+        android:textColor="@color/white" />
+</LinearLayout>

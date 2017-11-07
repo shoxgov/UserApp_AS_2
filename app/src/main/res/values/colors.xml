@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="shibanhui">#708090</color>
+    <color name="common_top_bar_blue">#22292c</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="white">#FFFFFF</color>
+    <color name="title_bar">#30a4e8</color>
+    <color name="money_press">#027A0B</color>
+    <color name="click">#ffdddddd</color>
+    <color name="bright_green">#ff00a976</color>
+    <color name="green_black">#ff0a5450</color>
+    <color name="dark_green">#ff00736d</color>
+    <color name="half_white">#88ffffff</color>
+    <color name="localstore_textcolor_black">#ff000000</color>
+    <color name="textcolor_black">#ff333333</color>
+    <color name="textcolor_gray">#ff999999</color>
+    <color name="bookcoin_charge_title_line">#ffe5e5e5</color>
+    <color name="gold">#FFD700</color>
+    <color name="activity_bg_light">#ffebebeb</color>
+    <color name="text_dark">#ff444444</color>
+    <color name="text_silver">#ffaaaaaa</color>
+    <color name="base_view_withe">#f2f2f2</color>
+    <color name="my_account_total_fanli_1">#ff3cb147</color>
+    <color name="my_account_bg_1">#f3ffffff</color>
+    <color name="orange">#ffa500</color>
+    <color name="red">#ff0000</color>
+    <color name="material_blue_500">#FFFFFF</color>
+    <color name="blcak_background">#000000</color>
+    <color name="green_theme">#45ad23</color>
+    <color name="press_theme">#CCCCCC</color>
+</resources>

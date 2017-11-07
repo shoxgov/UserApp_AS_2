@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:background="#30a4e8">
+
+        <ImageView
+            android:id="@+id/calback"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="11dp"
+            android:src="@mipmap/fanhui_baise" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TitleTheme"
+            android:text="身份证信息"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="@color/text_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_namecontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:hint="请输入您的真实姓名"
+        android:inputType="none"
+        android:singleLine="true"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:hint="请输入本人的身份证号码"
+        android:inputType="none"
+        android:singleLine="true"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txt_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text=""
+        android:textColor="@color/text_dark"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_sure"
+        android:layout_width="65dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_style"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txt_nointernet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="当前无网络"
+        android:textColor="@color/text_dark"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+</LinearLayout>

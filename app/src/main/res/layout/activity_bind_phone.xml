@@ -1,0 +1,202 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@mipmap/title_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/calback"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/fanhui_baise" />
+
+        <ImageView
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:background="#45a212" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TitleTheme"
+            android:layout_marginLeft="15dip"
+            android:text="修改绑定手机" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.001dp"
+        android:background="@mipmap/line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:text="绑定手机号即为您的登录账号"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!--<ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@mipmap/ic_release_contact" />-->
+
+                <TextView
+                    android:id="@+id/et_oldphone"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="9"
+                    android:background="@color/white"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- <ImageView
+                     android:layout_width="25dp"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="5dp"
+                     android:layout_marginLeft="5dp"
+                     android:background="@mipmap/ic_regist_verify" />-->
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="请输入您的登录密码"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- <ImageView
+                     android:layout_width="25dp"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="5dp"
+                     android:layout_marginLeft="5dp"
+                     android:background="@mipmap/ic_release_contact" />-->
+
+                <EditText
+                    android:id="@+id/et_newphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="请输入新的手机号码"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BindPhone_ly"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!--<ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@mipmap/ic_regist_verify" />-->
+
+                <EditText
+                    android:id="@+id/BindPhone_et"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint=" 请输入验证码"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/obtain_verticalcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:layout_marginEnd="14dp"
+                    android:layout_marginRight="14dp"
+                    android:background="@drawable/button_queding"
+                    android:padding="3dp"
+                    android:text="发送验证码"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/button_queding"
+                android:text="确定"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

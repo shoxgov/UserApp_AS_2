@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="确认数字密码"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="数字密码："
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/old_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入数字密码"
+                android:inputType="number"
+                android:password="true"
+                android:singleLine="true"
+                android:textColorHint="@color/textcolor_gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd-HH-mm-ss", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "25.0.2"
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.qingwing.safebox"
+        minSdkVersion 18
+        targetSdkVersion 22
+        versionCode 7
+        versionName "1.1.7"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+//执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+    }
+
+    signingConfigs {
+        release {
+            // 下面各值的意思将在后续进行讲解
+            /*   storeFile file('D://adt-bundle-windows-x86_64-20140321/bxstore.keystore')
+               storePassword "123456"
+               keyAlias "bxstore"
+               keyPassword "123456"*/
+        }
+        debug {
+
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+        }
+
+        release {
+            //true混淆;false不混淆
+            minifyEnabled false;//true
+            // 移除无用的resource文件
+            shrinkResources false
+//打开 true会报错提示这个错误。Error:A problem was found with the configuration of task ':app:packageRelease'
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // 签名配置
+            signingConfig signingConfigs.release
+            //打包输出格式
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为app_v1.0_2015-xx-xx_xxxx.apk
+                        def fileName = "UserApp_v${defaultConfig.versionName}_${releaseTime()}.apk"
+                        //def fileName = "app_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/volley.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/alipaySdk-20160802.jar')
+//    compile files('libs/android-support-v4.jar')//nineoldandroids已经包含了support-v4包，只保留一个就行了
+    compile files('libs/nineoldandroids-library-2.4.0.jar')
+    compile files('libs/android-support-v7-recyclerview.jar')
+    compile files('libs/android-async-http-1.4.8.jar')
+    compile files('libs/org.apache.http.legacy.jar')
+    compile files('libs/ShareSDK-Core-2.7.8.jar')
+    compile files('libs/ShareSDK-Wechat-2.7.8.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.7.8.jar')
+    compile files('libs/ShareSDK-QQ-2.7.8.jar')
+    compile files('libs/ShareSDK-QZone-2.7.8.jar')
+    compile files('libs/core-3.1.0.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.7.8.jar')
+    compile files('libs/MobTools-2016.1020.1028.jar')
+    compile files('libs/MobCommons-2016.1020.1028.jar')
+}

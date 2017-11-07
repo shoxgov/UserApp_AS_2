@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">青熠智能保管箱</string>
+    <!-- BX add -->
+    <string name="no_internet">无网络连接~!</string>
+    <string name="generic_server_down">连接服务器失败~!</string>
+    <string name="generic_error">网络异常,请稍后再试~!</string>
+    <string name="process_data_exception_try">数据处理异常,请重试!</string>
+    <string name="action_settings">Settings</string>
+    <!--
+    &lt;         <         小于号
+    &gt;         >         大于号
+    &amp;         &         and字符
+    &apos;         '         单引号
+    &quot;         "         双引号
+    -->
+   <!-- <string name="register_name_digits">._~!@#$%^&amp;*()+=-/:&quot;;&apos;,|&lt;&gt;?`0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ</string>-->
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+    <string name="scan_text">请扫描保管箱面板上的ID二维码</string>
+    <string name="option_about_footer">"湖南青熠信息技术有限公司 版权所有
+Copyright© 2016 青之翼
+All Rights Reserved"</string>
+    <string name="user_terms">青熠保管箱用户使用协议</string>
+    <string name="pay_title">请输入开箱密码</string>
+    <string name="tv_pager">首页</string>
+    <string name="tv_chongzhi">用户充值</string>
+    <string name="tv_boxexplain">保管箱说明</string>
+    <string name="tv_customservice">客服</string>
+    <string name="schoool_adress">学校地点</string>
+    <string name="title_activity_status">StatusActivity</string>
+    <string name="title_activity_indentify">IndentifyActivity</string>
+    <string name="title_activity_bind_phone">BindPhoneActivity</string>
+    <string name="title_activity_picture_upload">PictureUploadActivity</string>
+    <string name="title_activity_user_question">UserQuestionActivity</string>
+    <!-- pullrefresh -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_footer_hint_normal">上拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="title_activity_pay_record">PayRecordActivity</string>
+    <string name="title_activity_pay_style">PayStyleActivity</string>
+
+    <string-array name="Type">
+        <item>微信</item>
+        <item>支付宝</item>
+    </string-array>
+</resources>

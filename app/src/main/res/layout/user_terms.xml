@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/state"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#30a4e8" >
+
+        <ImageView
+            android:id="@+id/image_callback"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="11dp"
+            android:src="@mipmap/fanhui_baise" />
+
+        <TextView
+            style="@style/TitleTheme"
+            android:text="条款说明" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/wv_userterms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_below="@+id/state" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="3dp" >
+
+        <Button
+            android:id="@+id/bt_exit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="不同意，再了解一下"
+              android:layout_margin="2dp"
+             android:background="@drawable/red_textbg"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/bt_agree"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/textbg"
+            android:text="同意此条款协议"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

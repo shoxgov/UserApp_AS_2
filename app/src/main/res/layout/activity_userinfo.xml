@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/setting_item"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="85.0dip"
+        android:background="@color/white"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <com.qingwing.safebox.view.XCRoundImageView
+            android:id="@+id/userinfo_photo"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/background_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/userinfo_photo"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="ID:"
+                android:textColor="@color/text_silver"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/userinfo_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/text_silver"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:background="@drawable/setting_item"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dip"
+            android:background="@color/white"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageviewa"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/setting_share"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/imageviewa"
+                android:text="账号状态"
+                android:textColor="@color/text_dark"
+                android:textSize="16.0dip" />
+
+            <TextView
+                android:id="@+id/userinfo_account_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="已绑定" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ry_phone"
+            android:layout_width="match_parent"
+            android:layout_height="48.0dip"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/im_phone"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@mipmap/setting_feedback"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/im_phone"
+                android:text="服务到期时间"
+                android:textColor="@color/text_dark"
+                android:textSize="16.0dip" />
+
+            <TextView
+                android:id="@+id/userinfo_service_endtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="2017-4-14" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/setting_item" />
+
+
+        <RelativeLayout
+            android:id="@+id/register_password"
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dip"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/imagehe"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@mipmap/setting_isnbind"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/imagehe"
+                android:text="剩余电量"
+                android:textColor="@color/text_dark"
+                android:textSize="16.0dip" />
+
+            <TextView
+                android:id="@+id/userinfo_left_voltage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="60%" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

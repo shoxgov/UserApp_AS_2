@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.qingwing.safebox"
+    android:versionCode="7"
+    android:versionName="1.1.7">
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="22" />
+    <!-- 分享所需权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 生成二维码保存到本地需要的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 扫描二维码需要的权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <application
+        android:name="com.qingwing.safebox.QWApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="Android:icon, android:name">
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:launchMode="singleTask"></activity>
+        <activity
+            android:name=".activity.MainBoxActivity"
+            android:configChanges="orientation|locale|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.ModifyLoginPasswordActivity" />
+        <activity android:name=".activity.ModifyOpenBoxPasswordActivity" />
+        <activity android:name=".activity.UserTermsActivity" />
+        <activity
+            android:name=".activity.PackageMoneyActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".activity.RechargeHistoryActivity" />
+        <activity android:name=".activity.SettingActivity" />
+        <activity android:name=".activity.UserInfoActivity" />
+        <activity android:name=".activity.IndentifyActivity" />
+        <activity android:name=".activity.UserQuestionActivity" />
+        <activity android:name=".activity.StatusActivity" />
+        <activity android:name=".activity.GuestureLockActivity" />
+        <activity android:name=".activity.SettingLockTypeActivity" />
+        <activity android:name=".activity.GuestureLockPwdSettingActivity" />
+        <activity android:name=".activity.ModifyOpenBoxPwdByNumberActivity" />
+        <activity android:name=".activity.PictureUploadActivity" />
+        <activity android:name=".activity.AboutActivity" />
+        <activity android:name=".activity.HelpCenterActivity" />
+        <activity android:name=".activity.ShareActivity" />
+        <activity
+            android:name=".activity.BindPhoneActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".activity.FeedBackActivity" />
+        <activity
+            android:name=".activity.MipcaCaptureActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activity.UnbindMipcaCaptureActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".activity.HandleNoActivity" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoDisplay" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent1105790520" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.qingwing.safebox.wxapi.AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.qingwing.safebox.bluetooth.BluetoothService" />
+    </application>
+
+</manifest>

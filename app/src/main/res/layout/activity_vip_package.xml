@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bookcoin_charge_bg"
+    android:gravity="center">
+
+    <!-- 标题 -->
+    <LinearLayout
+        android:id="@+id/rl_biaoti"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@mipmap/title_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/image_callback"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/fanhui_baise" />
+
+        <ImageView
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:background="#45a212" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TitleTheme"
+            android:layout_marginLeft="15dip"
+            android:text="充值中心" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/payrecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:text="详情"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+    <!-- 充值卡 -->
+
+    <LinearLayout
+        android:id="@+id/ll_chongzhika"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_biaoti"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="13dp"
+            android:text="方式一：充值卡充值"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_cardNo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="请输入充值卡账号"
+            android:maxLength="30"
+            android:textColorHint="@color/textcolor_gray"
+            android:textSize="@dimen/text_size_class_4" />
+
+        <TextView
+            android:id="@+id/tv_fangshi2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="13dp"
+            android:text="方式二：在线充值"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_chongzhika"
+        android:layout_marginTop="15dp"
+        android:text="请先绑定设备后才能选择此方式充值,没有绑定请用充值卡"
+        android:visibility="gone" />
+    <!-- 选择的套餐框 -->
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_chongzhika"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dip"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dip"></GridView>
+
+    <TextView
+        android:id="@+id/confirm"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/money_btn_click"
+        android:gravity="center"
+        android:text="开通套餐"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_class_4" />
+
+</RelativeLayout>

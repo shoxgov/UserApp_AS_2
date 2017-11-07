@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/titie_a"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#30a4e8">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TitleTheme"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="个人中心" />
+
+        <ImageView
+            android:id="@+id/calback"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@mipmap/fanhui_baise" />
+    </RelativeLayout>
+
+</LinearLayout>

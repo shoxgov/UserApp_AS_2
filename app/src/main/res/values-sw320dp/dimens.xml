@@ -1,0 +1,10 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="anjianwidth">55dp</dimen>
+    <dimen name="anjianMagin">15dp</dimen>
+    <dimen name="anjianMimaCircle">10dp</dimen>
+    <dimen name="jiluHeight">60dp</dimen>
+    <dimen name="shoushiHeight">310dp</dimen>
+
+</resources>

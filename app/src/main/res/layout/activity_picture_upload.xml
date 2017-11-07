@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/titie_a"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#30a4e8">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TitleTheme"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="头像上传" />
+
+        <ImageView
+            android:id="@+id/calback"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@mipmap/fanhui_baise" />
+    </RelativeLayout>
+
+    <com.qingwing.safebox.view.XCRoundImageView
+        android:id="@+id/headImg"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/uploadImg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/button_queding"
+        android:text="上传图片"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/button_queding"
+        android:text="拍照" />
+
+    <Button
+        android:id="@+id/getPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/button_queding"
+        android:text="从手机相册中获取" />
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/tishiyu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dip"
+        android:text="请绘制开箱手势"
+        android:textSize="14sp" />
+
+    <com.qingwing.safebox.view.LocusPassWordView
+        android:id="@+id/mLocusPassWordView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tishiyu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dip" />
+
+</RelativeLayout>

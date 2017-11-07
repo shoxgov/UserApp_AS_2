@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/pop_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingTop="10dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:drawableLeft="@mipmap/ic_sticker_resize"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="温馨提示"
+            android:textColor="#000000"
+            android:textSize="@dimen/textSize_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recieve_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="您的保管箱租赁服务已到期，请及时续费"
+            android:textColor="#ff888888"
+            android:textSize="@dimen/textSize_16" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="20dip"
+        android:background="#ffdadada" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/cancle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_queding"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_16" />
+
+        <Button
+            android:id="@+id/exit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dip"
+            android:layout_weight="1"
+            android:background="@drawable/button_queding"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="确认"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_16" />
+    </LinearLayout>
+
+</LinearLayout>

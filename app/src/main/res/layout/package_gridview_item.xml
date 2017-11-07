@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/taocanbiankuang"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dip">
+
+    <TextView
+        android:id="@+id/tv_taocan_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="套餐名字"
+        android:textColor="#0099ff"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/tv_jine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="原价"
+        android:textColor="#4499ff"
+        android:textSize="17sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_reallyamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="出售：￥100"
+            android:textColor="#4499ff"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_depositamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_reallyamount"
+            android:layout_below="@+id/tv_reallyamount"
+            android:layout_gravity="center"
+            android:text="押金：￥0"
+            android:textColor="#4499ff"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#30a4e8">
+
+        <ImageView
+            android:id="@+id/image_callback"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@mipmap/fanhui_baise" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TitleTheme"
+            android:text="请完善您的密保问题" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="您可通过密保问题找回开箱密码" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="7dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="密保1:"
+                    android:textSize="15sp" />
+
+                <Spinner
+                    android:id="@+id/qustion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignTop="@id/tv1"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@mipmap/editext">
+
+                <EditText
+                    android:id="@+id/answer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="20dp"
+                    android:background="@null"
+                    android:hint="回答1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="7dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="密保2:"
+                    android:textSize="15sp" />
+
+                <Spinner
+                    android:id="@+id/qustion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignTop="@id/tv2"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@mipmap/editext">
+
+                <EditText
+                    android:id="@+id/answer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="20dp"
+                    android:background="@null"
+                    android:hint="回答2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="7dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="密保3:"
+                    android:textSize="15sp" />
+
+                <Spinner
+                    android:id="@+id/qustion3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignTop="@id/tv3"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@mipmap/editext">
+
+                <EditText
+                    android:id="@+id/answer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="20dp"
+                    android:background="@null"
+                    android:hint="回答3" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/bt_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_queding"
+                android:text="确定"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

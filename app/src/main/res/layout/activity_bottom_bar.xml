@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/box_bottom_status"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_total_fanli"
+        android:layout_width="fill_parent"
+        android:layout_height="32dip"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/bottom_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/main_tab_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_select"
+                android:button="@null"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="密码解锁 " />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <RadioButton
+                android:id="@+id/main_tab_column"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_select"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="手势解锁" />
+        </RadioGroup>
+    </RelativeLayout>
+</LinearLayout>

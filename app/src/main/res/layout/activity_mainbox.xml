@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/title_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <fragment
+        android:id="@+id/fragement_guesture_unlock"
+        android:name="com.qingwing.safebox.fragment.HomeGuestureUnlockBoxFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" />
+
+    <fragment
+        android:id="@+id/fragement_number_unlock"
+        android:name="com.qingwing.safebox.fragment.HomeNumberUnlockBoxFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/recorder_history_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip"
+        android:text="当前无任何操作记录" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@mipmap/juxing_5" />
+
+    <ListView
+        android:id="@+id/state_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:smoothScrollbar="true" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@mipmap/juxing_5" />
+
+
+    <RadioGroup
+        android:id="@+id/bottomRg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip">
+
+        <RadioButton
+            android:id="@+id/rb_qr"
+            style="@style/rg_btn_style"
+            android:checked="true"
+            android:drawableTop="@drawable/bottom_scan"
+            android:text="扫码租箱"
+            android:textColor="@drawable/main_home_textcolor"
+            android:textSize="@dimen/textSize_14" />
+
+        <RadioButton
+            android:id="@+id/rb_pay"
+            style="@style/rg_btn_style"
+            android:drawableTop="@drawable/bottom_pay"
+            android:text="充值管理"
+            android:textColor="@drawable/main_home_textcolor"
+            android:textSize="@dimen/textSize_14" />
+
+        <RadioButton
+            android:id="@+id/rb_help"
+            style="@style/rg_btn_style"
+            android:drawableTop="@drawable/bottom_help"
+            android:text="帮助中心"
+            android:textColor="@drawable/main_home_textcolor"
+            android:textSize="@dimen/textSize_14" />
+
+        <RadioButton
+            android:id="@+id/rb_setting"
+            style="@style/rg_btn_style"
+            android:drawableTop="@drawable/bottom_setting"
+            android:text="设置选项"
+            android:textColor="@drawable/main_home_textcolor"
+            android:textSize="@dimen/textSize_14" />
+    </RadioGroup>
+
+</LinearLayout>

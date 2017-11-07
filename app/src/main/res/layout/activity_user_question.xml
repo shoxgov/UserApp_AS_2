@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_biaoti"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#45ad23">
+
+        <ImageView
+            android:id="@+id/dialog_callback"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@mipmap/fanhui_baise" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TitleTheme"
+            android:text="请回答密保问题" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_biaoti"
+        android:fadeScrollbars="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"
+                android:text="通过密保问题后才能重置您的开箱密码"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="7dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text=" 1:"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_qustion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@id/tv1"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv1"
+                    android:gravity="center_vertical|left"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@mipmap/editext">
+
+                <EditText
+                    android:id="@+id/et_answer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:hint="回答1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="7dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text=" 2:"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_qustion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@id/tv2"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv2"
+                    android:gravity="center_vertical|left"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@mipmap/editext">
+
+                <EditText
+                    android:id="@+id/et_answer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:hint="回答2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="7dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text=" 3:"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_qustion3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@id/tv3"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv3"
+                    android:gravity="center_vertical|left"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@mipmap/editext">
+
+                <EditText
+                    android:id="@+id/et_answer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:hint="回答3" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/bt_modifypwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_queding"
+                android:text="确定"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

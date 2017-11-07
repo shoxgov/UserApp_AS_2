@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/pop_top"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:background="#ffe63955"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:drawableLeft="@mipmap/ic_sticker_resize"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="温馨提示"
+                android:textColor="@color/white"
+                android:textSize="16.0dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recieve_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="110.0dip"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="您确定要退出应用吗？"
+                android:textColor="#ff888888"
+                android:textSize="16.0dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="#ffdadada" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/cancle"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/btn_click"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:paddingBottom="12.0dip"
+                    android:paddingTop="12.0dip"
+                    android:text="再逛一逛"
+                    android:textColor="#ff888888"
+                    android:textSize="16.0dip" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="#ffdadada" />
+
+                <TextView
+                    android:id="@+id/exit"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/btn_click"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:paddingBottom="12.0dip"
+                    android:paddingTop="12.0dip"
+                    android:text="狠心离开"
+                    android:textColor="#ff888888"
+                    android:textSize="16.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
